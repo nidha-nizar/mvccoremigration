@@ -1,0 +1,27 @@
+﻿@model mvccoremigration.Models.product
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Product</h4>
+<hr/>
+<div class="row">
+	<form asp-action="Edit">
+		<input type="hidden" asp-for="p_id" />
+	
+	<div class="form-group">
+		<label asp-for="pro_name" class="control-label"></label>
+		<input asp-for="pro_name" class="form-control" /> 
+	</div><br/>
+	<div class="form-grup">
+		<label  class="control-label">category</label>
+		<select asp-for="id" asp-items="@(new SelectList(ViewBag.message,"id","name"))"></select>
+	</div><br/>
+	<div class="form-group">
+		<input type="submit" value="save" class="btn btn-primary" />
+	</div>
+	</form>
+</div>
+<div>
+	<a asp-action="Index">Back to list</a>
+</div>

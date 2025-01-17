@@ -1,0 +1,21 @@
+﻿@model photo
+
+@{
+	ViewData["Title"] = "create";
+}
+<hr/>
+<div class="row">
+	<div class=" col-md-4">
+		<form method="post" asp-action="Createpost" enctype="multipart/form-data" asp-controller="Photo">
+			<div class="form-group">
+				<label asp-for="filepath" class="control-label"></label>
+				<input type="file" asp-for="fileobj" class="form-control" multiple/>
+
+			</div>
+			<br/>
+			<div class="form-group">
+				<input type="submit" value="create" class="btn btn-primary"/>
+			</div>
+		</form>
+	</div>
+</div>

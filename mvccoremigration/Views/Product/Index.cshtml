@@ -1,0 +1,24 @@
+﻿@model IEnumerable<viemodel>
+<p>
+	<a asp-asp-action="create">create new</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>productname</th>
+			<th>categoryname</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.pro_name</td>
+				<td>@item.name</td>
+				<td><a asp-action="Edit" asp-controller="Product" asp-route-id="@item.p_id">Edit</a></td>
+				<td><a asp-action="delete" asp-controller="Product" asp-route-id="@item.p_id">DELETE</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

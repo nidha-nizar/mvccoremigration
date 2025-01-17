@@ -1,0 +1,28 @@
+﻿@model product
+{
+}
+@{
+	ViewData["Title"] = "create";
+}
+<h1>create</h1>
+<h4>product</h4>
+<hr/>
+<div class="row">
+	<div class="col-md-5">
+		<form asp-controller="Product" asp-action="create" method="post">
+			<div class="form-group">
+				<label class="control-label">category</label>
+				<select asp-for="id" asp-items="@(new SelectList(ViewBag.message,"id","name"))">
+					</select>
+			</div>
+			<br />
+			<div class="form-group">
+				<label asp-for="pro_name" class="control-label"></label>
+				<input asp-for="pro_name" class="form-control " />
+			</div>
+			<div class="form-group">
+				<input type="submit" value="create" class="btn btn-primary" />
+				</div>
+		</form>
+	</div>
+</div>
